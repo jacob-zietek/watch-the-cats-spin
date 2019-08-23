@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<script src="./default.js"></script>
+
+<html>
+
+<head>
+</head>
+
+<body bgcolor="#0a161f">
+
+  <style>
+    .video {
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+    }
+
+    .topText {
+      position: absolute;
+      margin: 0;
+      position: absolute;
+      top: 19%;
+      left: 50%;
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      color: rgb(238, 233, 228);
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 300%;
+      text-align: center;
+    }
+  </style>
+
+  <div class="topText" id="topText">
+    Number of full spins : 0
+  </div>
+
+  <div class="video">
+    <video id="catVideo" width="500" height="500" align="middle" playsinline autoplay>
+      <source src="loading.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <script>
+    var vid = document.getElementById("catVideo");
+    vid.onloadstart = () => {
+      windowOnload();
+    }
+  </script>
+</body>
+</html>
